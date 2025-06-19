@@ -9,13 +9,11 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             int num = nums[i];
 
-            // Store the first occurrence
             firstIndex.putIfAbsent(num, i);
 
-            // Count the frequency
+
             count.put(num, count.getOrDefault(num, 0) + 1);
 
-            // Update degree and minLength
             if (count.get(num) > degree) {
                 degree = count.get(num);
                 minLength = i - firstIndex.get(num) + 1;
