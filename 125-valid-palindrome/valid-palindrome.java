@@ -4,13 +4,7 @@ class Solution {
        String onlyWord= s.trim().replaceAll("[^A-Za-z0-9]","").toLowerCase();
         StringBuilder sb=new StringBuilder(onlyWord);
         sb.reverse();
-        if(sb.toString().equals(onlyWord))
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        return (sb.toString().equals(onlyWord));
+        
     }
 }
